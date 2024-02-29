@@ -22,11 +22,11 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
-.h2__text {
+.section__title {
   font-size: 18px;
   font-weight: bold;
 }
-.p__text {
+.info__text {
   font-size: 13px;
 }
 .btn__link {
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Text-transform */
-.h2__text, .btn__link, .header__title, .about__grid-item, .services__grid-h4, .form__btn, .footer__grid-item {
+.section__title, .btn__link, .header__title, .about__grid-item, .services__grid-card__title, .form__btn, .footer__grid-item {
   text-transform: uppercase;
 }
 
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 400;
   color: var(--white-color);
 }
-.header__h4 {
+.header__subtitle {
   font-size: 24px;
   font-weight: 600;
   color: var(--white-color);
@@ -124,12 +124,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* About section */
-.about__h2 {
+.about__title {
   text-align: center;
   padding: 50px 0;
   margin-bottom: 0;
 }
-.about__h2::after {
+.about__title::after {
   content: '';
   width: 50px;
   height: 2px;
@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6, p {
 .about__flex-left {
   max-width: 398px;
 }
-.about__h3 {
+.about__subtitle {
   font-size: 20px;
   font-weight: bold;
   margin: 0 0 30px;
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: start;
   margin-bottom: 80px;
 }
-.services__h2::after {
+.services__title::after {
   content: '';
   width: 50px;
   height: 2px;
@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   margin: 10px auto 0 0;
 }
-.services__p {
+.services__text {
   font-size: 11px;
   max-width: 405px;
 }
@@ -210,16 +210,16 @@ h1, h2, h3, h4, h5, h6, p {
 .services__grid-icon {
   margin-bottom: 25px;
 }
-.services__grid-h4 {
+.services__grid-card__title {
   font-style: 16px;
   margin-bottom: 13px;
 }
-.services__grid-h4, .services__grid-text {
+.services__grid-card__title, .services__grid-text {
   max-width: 250px;
 }
 
 /* General style for about and services section */
-.about__p, .services__grid-text {
+.about__text, .services__grid-text {
   line-height: 23px;
 }
 
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   padding: 120px 0 231px;
 }
-.get-in-touch__h3 {
+.get-in-touch__title {
   font-size: 30px;
   max-width: 350px;
   margin: 0 auto 35px;
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer__logo {
   margin-bottom: 15px;
 }
-.footer__h4 {
+.footer__info-title {
   margin-bottom: 19px;
 }
 .footer__grid {
@@ -317,7 +317,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* General style for footer and copyright section */
-.footer__h4, .footer__h4_links, .footer__grid-item, .footer__text, .copyright__text {
+.footer__info-title, .footer__info-links, .footer__grid-item, .footer__text, .copyright__text {
   color: var(--white-color);
   font-size: 11px;
 }
@@ -339,7 +339,7 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     align-items: center;
   }
-  .about__p {
+  .about__text {
     margin-bottom: 30px;
   }
 }
@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     align-items: center;
   }
-  .services__h2::after {
+  .services__title::after {
     content: '';
     width: 50px;
     height: 2px;
@@ -357,12 +357,12 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     margin: 20px auto;
   }
-  .services__p {
+  .services__text {
     text-align: center;
     margin-bottom: 20px;
   }
   .form__label {
-    font-size: 20px;
+    font-size: 20px;  
     line-height: 2;
   }
   .footer__links {
@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 40px;
     margin-bottom: 20px;
   }
-  .header__h4 {
+  .header__subtitle {
     font-size: 20px;
   }
   .form__label {
@@ -404,7 +404,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: grid;
     justify-items: center;
   }
-  .services__grid-h4, .services__grid-text {
+  .services__grid-card__title, .services__grid-text {
     text-align: center;
   }
   .form__label {
@@ -454,12 +454,25 @@ h1, h2, h3, h4, h5, h6, p {
   .container {
     padding: 0 15px;
   }
+  .header {
+    position: relative;
+    height: 100vh;
+  }
+  .header__link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);  
+  }
   .header__title {
     font-size: 30px;
-    margin-bottom: 20px;
   }
-  .header__h4 {
+  .header__subtitle {
     font-size: 15px;
+    margin-bottom: 0;
+  }
+  .header__logo {
+    margin-bottom: 100px;
   }
   .about__flex-right {
     flex-direction: column;
