@@ -29,11 +29,11 @@
         </div>
         <nav class="navbar__menu">
           <ul class="navbar__items">
-            <li class="navbar__item"><a href="#header" class="navbar__link">Home</a></li>
-            <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
-            <li class="navbar__item"><a href="#services" class="navbar__link">Services</a></li>
-            <li class="navbar__item"><a href="#get-in-touch" class="navbar__link">Work</a></li>
-            <li class="navbar__item"><a href="#footer" class="navbar__link">Contact</a></li>
+            <li class="navbar__item"><a href="#header" class="navbar__link click__link">Home</a></li>
+            <li class="navbar__item"><a href="#about" class="navbar__link click__link">About</a></li>
+            <li class="navbar__item"><a href="#services" class="navbar__link click__link">Services</a></li>
+            <li class="navbar__item"><a href="#get-in-touch" class="navbar__link click__link">Work</a></li>
+            <li class="navbar__item"><a href="#footer" class="navbar__link click__link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -66,7 +66,7 @@
       <div class="services__flex">
         <h2 class="section__title services__title">Our capabilities</h2>
         <p class="info__text services__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
-        <button class="btn services__btn"><a href="#footer" class="services__link btn__link">All services</a></button>
+        <button data-modal class="btn services__btn modal__btn"><a href="#" class="services__link btn__link">All services</a></button>
       </div>
       <div class="services__grid">
         <div class="services__grid-item card">
@@ -92,7 +92,7 @@
 
   <section class="get-in-touch" id="get-in-touch">
     <h3 class="get-in-touch__title">Want to build something amazing?</h3>
-    <button class="btn"><a href="#footer" class="btn__link">Get in touch</a></button>
+    <button data-modal class="btn modal__btn"><a href="#" class="btn__link">Get in touch</a></button>
   </section>
 
   <!-- Input section -->
@@ -123,11 +123,11 @@
           <h4 class="footer__info-links">Links</h4>
           <div class="footer__grid">
             <ul class="footer__grid-items">
-              <li class="footer__grid-item"><a href="#" class="footer__link">Home</a></li>
-              <li class="footer__grid-item"><a href="#" class="footer__link">About</a></li>
-              <li class="footer__grid-item"><a href="#" class="footer__link">Services</a></li>
-              <li class="footer__grid-item"><a href="#" class="footer__link">Project</a></li>
-              <li class="footer__grid-item"><a href="#" class="footer__link">Contact us</a></li>
+              <li class="footer__grid-item"><a href="#header" class="footer__link click__link">Home</a></li>
+              <li class="footer__grid-item"><a href="#about" class="footer__link click__link">About</a></li>
+              <li class="footer__grid-item"><a href="#services" class="footer__link click__link">Services</a></li>
+              <li class="footer__grid-item"><a href="#get-in-touch" class="footer__link click__link">Project</a></li>
+              <li class="footer__grid-item"><a href="#get-in-touch" class="footer__link click__link">Contact us</a></li>
             </ul>
             <ul class="footer__grid-items">
               <li class="footer__grid-item">Faq</li>
@@ -160,5 +160,23 @@
       <p class="copyright__text">© 2017 Konstruct Inc. Designed by Jane Kathryn Teo</p>
     </div>
   </section>
+
+  <!-- Modal -->
+
+  <div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <form action="#">
+                <div data-close class="modal__close">&times;</div>
+                <div class="modal__title">We will write to you!</div>
+                <input required placeholder="test@youremail.com" name="email" type="email" class="modal__input">
+                <button class="btn modal__btn">Send</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>
